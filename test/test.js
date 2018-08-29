@@ -7,7 +7,7 @@ var MNEMONIC = 'everest wheel'
 
 describe('Generator', function() {
   it('should return the mnemonic corresponding to the address', function() {
-      mnemonic = generator(ADDRESS)
+      var mnemonic = generator(ADDRESS)
       assert.equal(mnemonic, MNEMONIC);
   });
 });
