@@ -1,16 +1,16 @@
-const hash = require('object-hash');
-const words = require('./words')
+var hash = require('object-hash');
+var words = require('./words');
 
-const SALT = "SCHWIFTY"
+var SALT = 'SCHWIFTY';
 
-const getSingleMnemonic = (address) => {
-  objHash = hash(address);
-  index = parseInt(objHash, 16) % words.length;
+function getSingleMnemonic (address) {
+  var objHash = hash(address);
+  var index = parseInt(objHash, 16) % words.length;
   return words[index];
 }
-const addressToMnemonic = (address) => {
-  word1 = getSingleMnemonic(address);
-  word2 = getSingleMnemonic(address + SALT);
+function addressToMnemonic (address) {
+  var word1 = getSingleMnemonic(address);
+  var word2 = getSingleMnemonic(address + SALT);
   return word1 + ' ' + word2
 }
 
