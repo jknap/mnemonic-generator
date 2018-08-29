@@ -1,4 +1,4 @@
-const generator = require('./generator');
+const generator = require('../');
 
 const userAddress = process.argv[2];
 

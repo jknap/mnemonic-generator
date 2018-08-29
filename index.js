@@ -1,5 +1,5 @@
 const hash = require('object-hash');
-const words = require('./constants/words')
+const words = require('./words')
 
 const SALT = "SCHWIFTY"
 
