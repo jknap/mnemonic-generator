@@ -1,9 +1,8 @@
-const addresses = require('./constants/addresses');
 const generator = require('./generator');
 
-const randomAddress = addresses[Math.floor(Math.random()*addresses.length)];
+const userAddress = process.argv[2];
 
-const mnemonic = generator(randomAddress);
+const mnemonic = generator(userAddress);
 
-console.log(`Random address: ${randomAddress}`);
+console.log(`User address: ${userAddress}`);
 console.log(`Corresponding mnemonic: ${mnemonic}`);
